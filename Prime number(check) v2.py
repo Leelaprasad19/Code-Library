@@ -1,22 +1,23 @@
 import math
 
-
-def prime(x):
+def checkPrime(number):
     
-    if(x <= 2 or x==3):
+    if(number <= 3):
         return True
-    elif(x%2==0 or x%3==0):
+    
+    if(number%2==0):
         return False
-    else:
-        for i in range(5,int(math.sqrt(x)),6):
-            if(x%i==0):
-                return False
-                
-        return True
+    
+    for i in range(3, int(math.sqrt(number))+1,2):
+        
+       if(number%i==0):
+           return False
+        
+    return True
 
 x = 79
 
-if(prime(x)):
+if(checkPrime(x)):
     print("Prime")
 else:
     print("Composite")
