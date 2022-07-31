@@ -1,19 +1,20 @@
-def function(c,sum_,n):
+def function(sum_, c):
     
     dp = [0 for i in range(sum_+1)]
     dp[0] = 1
     
-    for i in range(1,sum_+1):
-        for j in range(n):
-            if(i-c[j] >= 0):
-                dp[i] = dp[i] + dp[i - c[j]]
+    for i in range(len(c)):
+        
+        for j in range(c[i], sum_+1):
+            
+            dp[j] = dp[j] + dp[j-c[i]]
+            
     
     print(dp)
 
-
-c = [2,3,5]
+c = [1,2,3]
 n = len(c)
-sum_ = 9
+sum_ = 4
 
-function(c,sum_,n)
+function(sum_, c)
 
