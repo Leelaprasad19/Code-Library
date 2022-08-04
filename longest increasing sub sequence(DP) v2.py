@@ -17,7 +17,7 @@ def lengthOfLIS(nums):
     
     i = maxIndex
     sol = [nums[maxIndex]]
-    while(i):
+    while(i >= 0):
         if(dp[i]+1 == dp[maxIndex]):
             maxIndex = i
             sol.insert(0,nums[maxIndex])
@@ -25,12 +25,9 @@ def lengthOfLIS(nums):
         i-=1
         
     print(sol)
-            
-               
-             
     return max_
     
 
-arr = [10,9,2,5,3,7,101,18]
+arr = [0,1,0,3,2,3]
 print(lengthOfLIS(arr))
 
