@@ -20,5 +20,4 @@ def rob(nums):
 a = [2,7,9,3,1]
 a = [6, 7, 1, 3, 8, 2, 4]
 a = [5, 3, 4, 11, 2]
-print(rob(a))
-        
+print(rob(a))     
