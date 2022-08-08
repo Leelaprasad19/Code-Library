@@ -12,4 +12,3 @@ strings = input().split()
 for string in strings:
     
     isPalindrome(string)
-
